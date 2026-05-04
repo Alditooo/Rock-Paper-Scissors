@@ -1,3 +1,5 @@
+// PARA PROBAR SI ESTA EN EL BRACNH
+
 // Declare SCORES
 let computerScore = 0
 let humanScore = 0
@@ -7,7 +9,7 @@ function getComputerChoice() { // function to randomly generate rock, paper or s
     let b
     if (a <= 0.33) {
         b = "Rock"
-    } else if (a >= 0.331 && a < 0.66) {
+    } else if (a >= 0.331 && a <= 0.66) {
         b = "Paper"
     } else {
         b = "Scissors"
@@ -57,6 +59,7 @@ function playGame() {
 
         console.log("Human Score: ", humanScore)
         console.log("Computer Score: ", computerScore)
+        console.log("-----------------------")
     }
 
     if (humanScore > computerScore) {
