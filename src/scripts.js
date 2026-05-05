@@ -1,6 +1,13 @@
+
 const rockBtn = document.querySelector("#rockButton")
 const paperBtn = document.querySelector("#paperButton")
 const scissorsBtn = document.querySelector("#scissorsButton")
+const statusCont = document.querySelector("#gameStatus")
+
+const statusMsg = document.createElement("p")
+statusMsg.style.color = "white"
+
+statusCont.appendChild(statusMsg)
 
 // Declare SCORES
 let computerScore = 0
@@ -20,18 +27,20 @@ function getComputerChoice() { // function to randomly generate rock, paper or s
 }
 
 function playRound(humanChoice, computerChoice) {
-    
+
     if ((humanChoice == "rock" && computerChoice == "rock") || (humanChoice == "paper" && computerChoice == "paper") || (humanChoice == "scissors" && computerChoice == "scissors")) {
         console.log("It's a Tie!!")
-        
+        statusMsg.textContent = "IT'S A TIE"
     } else if ((humanChoice == "rock" && computerChoice == "scissors") || (humanChoice == "paper" && computerChoice == "rock") || (humanChoice == "scissors" && computerChoice == "paper")) {
         console.log("HUMAN WINS!!")
         humanScore += 1
         document.querySelector("#human-points").textContent = humanScore;
+        statusMsg.textContent = "YOU WIN"
     } else if ((computerChoice == "rock" && humanChoice == "scissors") || (computerChoice == "paper" && humanChoice == "rock") || (computerChoice == "scissors" && humanChoice == "paper")) {
         console.log("COMPUTER WINS!!")
         computerScore += 1
         document.querySelector("#computer-points").textContent = computerScore
+        statusMsg.textContent = "COMPUTER WINS"
     }
     checkWinner()
 }
