@@ -3,10 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Rock-Paper-Scissors</title>
 </head>
 <body>
-    
+    <div id="container">
+        <div id="rock" class="cont">
+            <img src="./images/rock.avif" alt="rock" height="200px" width="300px">
+            <button id="rockButton" class="button">ROCK</button>
+        </div>
+        <div id="paper" class="cont">
+            <img src="./images/paper.jpg" alt="paper" height="200px" width="300px">
+            <button id="paperButton" class="button">PAPER</button>
+        </div>
+        <div id="scissors" class="cont">
+            <img src="./images/scissors.webp" alt="scissors" height="200px" width="300px">
+            <button id="scissorsButton" class="button">SCISSORS</button>
+        </div>
+    </div>
+    <section id="marcador">
+        <div class="score-item">
+            <h3>Human Score</h3>
+            <span id="human-points">0</span>
+        </div>
+        <div class="vs">VS</div>
+        <div class="score-item">
+            <h3>Computer Score</h3>
+            <span id="computer-points">0</span>
+        </div>
+    </section>
+    <div id="gameStatus"></div>
 </body>
-<script src="scripts.js"></script>
+<script src="./src/scripts.js" defer></script>
 </html> 

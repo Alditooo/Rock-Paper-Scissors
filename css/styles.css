@@ -1,0 +1,66 @@
+/*--BODY--*/
+
+body {
+    background-color: rgb(78, 10, 32);
+    margin: 0;
+}
+/*--CONTAINER--*/
+
+#container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 40px;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#marcador {
+    gap: 40px;
+}
+/*--BUTTONS--*/
+
+.button {
+    border-style: solid;
+    border-width: 3px;
+    border-radius: px;
+    color: whitesmoke;
+    border-color: whitesmoke;
+    background-color: transparent;
+    width: 150px;
+    padding: 10px;
+}
+
+.button:hover {
+    border-color: rgb(222, 106, 28);
+}
+
+.button:active {
+    color: rgb(222, 106, 28);
+}
+/*--SCORE--*/
+
+#marcador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-top: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.score-item {
+    text-align: center;
+}
+
+#gameStatus{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
